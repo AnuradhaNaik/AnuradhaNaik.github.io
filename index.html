@@ -197,7 +197,7 @@ Graphic Design using Photoshop CS6, Software engineering, NPM
 <div class="section" id="experience"><h1 style="font-size: xx-large;text-align: center;">Experience</h1>
 
 <ul style="list-style: none;padding: 9px;" class="exp-list">
-<h1 style="font-size:xx-large ;"><span>Web</span></h1>
+<h1 style="font-size:xx-large ;"><span id="web-proj">Web</span></h1>
 	
 	<li><h2>Medical Report Generator</h2>
 <p>I created a simple ,purely frontend web application for medical professionals to generate reports of any kind. All you must do is click on create report , fill out the fields ,hit generate and a printable report will be generated ,the report can also be saved as a template for later.</p>
@@ -228,7 +228,7 @@ Graphic Design using Photoshop CS6, Software engineering, NPM
     /* border-radius: 0%; */
 ">
 	</li>
-	<h1 style="font-size:xx-large ;"><span>Android</span></h1>
+	<h1 style="font-size:xx-large ;"><span id="android-proj">Android</span></h1>
 
 	<li><h2 >GRE Prep</h2>
         <p>
@@ -338,7 +338,7 @@ Android Application for GRE Verbal Preperation .The app is an obstacle course ga
     font-size:     xx-large;
     padding: 5px;
     margin: 4px;
-">Contact Me
+"><span id="contact-info">Contact Me</span>
 
     </h1><br>
     <!--
@@ -348,19 +348,45 @@ Android Application for GRE Verbal Preperation .The app is an obstacle course ga
     </span> -->
      <style type="text/css">
        .nav-l{
-
+        position: fixed;
+        right:7px;
+        bottom: 7px;
+        list-style: none;
        }
+       .nav-l button{
+        min-width: 60px;
+        min-height: 60px;
+        margin-bottom: 17px;
+        margin-top: 16px;
+        border:none;
+        background:orange;
+        border-radius: 50%;
+        box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12), 0 1px 1px 0 rgba(0,0,0,.24);
+        outline: none;
+        cursor: pointer;
+       }
+        .nav-l button img{
+          width: 47%;
+        }
      </style>
     <div>
       
       <ul class="nav-l">
         
-        <li><button><a>Web</a></button></li>
-        <li><button><a>Android</a></button></li>
-        <li><button><a>Contact</a></button></li>
+        <li><button onclick="scrolltonav('#web-proj')"><img  src="images/earth.svg"></button></li>
+        <li><button  onclick="scrolltonav('#android-proj')"><img src="images/android.svg"></button></li>
+        <li><button  onclick="scrolltonav('#contact-info')"><img src="images/phone.svg"></button></li>
       </ul>
     </div>
-    
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="velocity.min.js"></script>
+    <script type="text/javascript">
+      function scrolltonav(id) {
+      $('html, body').animate({
+                    scrollTop: $(id).offset().top
+                }, 1000);
+      }
+    </script>
     <a target="_blank" href="https://www.google.com">Mail </a> &nbsp;&nbsp;| &nbsp;&nbsp;<a target="_blank" href="https://www.linkedin.com/in/anuradha-naik-86aa8bb5
 ">LinkedIn</a> &nbsp;&nbsp;|&nbsp;&nbsp; <a href="res.docx"> Resume </a></p>
 </footer>
